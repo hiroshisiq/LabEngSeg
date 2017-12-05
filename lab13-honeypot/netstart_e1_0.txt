@@ -1,0 +1,30 @@
+Conexões Internet Ativas (servidores e estabelecidas)
+Proto Recv-Q Send-Q Endereço Local          Endereço Remoto         Estado      PID/Program name
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               OUÇA       331/portmap     
+tcp        0      0 10.1.1.11:53            0.0.0.0:*               OUÇA       571/named       
+tcp        0      0 127.0.0.1:53            0.0.0.0:*               OUÇA       571/named       
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               OUÇA       597/sshd        
+tcp        0      0 0.0.0.0:3128            0.0.0.0:*               OUÇA       556/(squid)     
+tcp        0      0 127.0.0.1:953           0.0.0.0:*               OUÇA       571/named       
+tcp6       0      0 :::80                   :::*                    OUÇA       531/apache2     
+tcp6       0      0 :::21                   :::*                    OUÇA       586/proftpd: (accep
+tcp6       0      0 :::53                   :::*                    OUÇA       571/named       
+tcp6       0      0 :::22                   :::*                    OUÇA       597/sshd        
+tcp6       0      0 ::1:953                 :::*                    OUÇA       571/named       
+udp        0      0 10.1.1.11:53            0.0.0.0:*                           571/named       
+udp        0      0 127.0.0.1:53            0.0.0.0:*                           571/named       
+udp        0      0 0.0.0.0:37686           0.0.0.0:*                           556/(squid)     
+udp        0      0 0.0.0.0:3130            0.0.0.0:*                           556/(squid)     
+udp        0      0 0.0.0.0:111             0.0.0.0:*                           331/portmap     
+udp6       0      0 :::53                   :::*                                571/named       
+Domain sockets UNIX ativos (servidores e estabelecidas)
+Proto RefCnt Flags       Type       State         I-Node   PID/Program name    Caminho
+unix  8      [ ]         DGRAM                    308      443/syslogd         /dev/log
+unix  2      [ ]         DGRAM                    599      571/named           
+unix  2      [ ]         DGRAM                    559      556/(squid)         
+unix  2      [ ]         DGRAM                    554      553/squid           
+unix  2      [ ]         DGRAM                    466      504/login           
+unix  2      [ ]         DGRAM                    459      503/login           
+unix  2      [ ]         DGRAM                    318      452/klogd           
+Sockets IPX ativos
+Proto Recv-Q Send-Q Endereço Local             Endereço Remoto           Estado
