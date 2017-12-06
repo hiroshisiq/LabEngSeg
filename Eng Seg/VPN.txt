@@ -1,0 +1,44 @@
+#https://openvpn.net/index.php/open-source/documentation.html
+#https://openvpn.net/images/pdf/OpenVPN_Access_Server_Sysadmin_Guide_Rev.pdf
+#https://openvpn.net/papers/openvpn-101.pdf
+
+ su joaquim
+# ssh-keygen -t rsa -b 2048
+cd /home/joaquim/.ssh
+#8. Existirão dois arquivos, um arquivo id_rsa e outro, id_rsa.pub, que são as
+#chaves privadas e públicas do usuário, respectivamente. Visualize o
+#conteúdo das duas com o comando cat. 
+
+#add id_rsa.pub to authorized keys
+ mkdir /home/joaquim/.ssh
+ touch /home/joaquim/.ssh/authorized_keys
+ 
+#/etc/init.d/ssh start
+
+ openvpn --genkey --secret /etc/openvpn/minhavpn.key
+
+#16. Crie o arquivo matriz.conf na pasta /etc/openvpn, com o seguinte conteúdo:
+remote 202.135.187.10
+dev tun
+ifconfig 10.0.0.1 10.0.0.2
+cd /etc/openvpn
+secret minhavpn.key
+port 5000
+user root
+group root
+comp-lzo
+# Keep alive
+ping 15
+verb 3
+
+ openvpn --config /etc/openvpn/matriz.conf –-daemon
+
+#18. Repita a configuração para o SERVIDORB. As principais diferenças:
+#A linha remote que deverá utilizar o IP externo do servidor A, e os IPs da
+#linha ipconfig deverão ser invertidos. 
+
+
+#2. Caso encontre problemas, tente acrescentar a rota no SERVIDOR B
+ route add -net 192.168.2.0/24 gw 10.0.0.2
+#23. Caso encontre problemas, tente acrescentar a rota no SERVIDOR A
+ route add -net 192.168.1.0/24 gw 10.0.0.1

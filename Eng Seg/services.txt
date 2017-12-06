@@ -1,0 +1,14 @@
+/etc/init.d/proftpd start		-- port 21
+/etc/init.d/ssh start			-- port 22
+/etc/init.d/	start
+/etc/init.d/proftpd start
+/etc/init.d/proftpd start
+
+cd /etc/init.d
+./apache2 start
+./squid start
+./bind start
+./proftpd start
+./ssh start
+
+ ps aux | more

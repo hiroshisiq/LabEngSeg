@@ -1,0 +1,12 @@
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+SERVIDOR:~$ iptables –F
+SERVIDOR:~$ iptables -F -t nat
+SERVIDOR:~$ iptables -F -t mangle
+SERVIDOR:~$ iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE		--mangle,raw,nat,filter
+
+#iptables -A INPUT -s 0.0.0.0/0 -j DROP 					--discard all that wasnt in other rules
+
+iptables -t nat -A PREROUTING -p tcp --dport 21 -j DNAT --to 
+10.1.1.13
+iptables -t nat -A PREROUTING -p tcp --dport 22 -j DNAT --to 10.1.1.11		--redirect to ports to ip's

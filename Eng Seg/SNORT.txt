@@ -1,0 +1,26 @@
+#https://s3.amazonaws.com/snort-org-site/production/document_files/files/000/000/129/original/snort_manual.pdf?AWSAccessKeyId=AKIAIXACIED2SPMSC7GA&Expires=1512503002&Signature=81ozr%2Fjgq63%2Ft3bIB3CRnAbzEzg%3D
+#http://sublimerobots.com/2016/02/snort-ips-inline-mode-on-ubuntu/
+
+snort -vde
+
+#To stop snort, ping from another machine 
+
+#Modo NIDS
+#/etc/snort/snort.conf					-config 
+snort -A full -c /etc/snort/snort.conf
+cat /var/log/snort/alert
+
+#/etc/snort/rules/local.rules 
+#alert [protocol] [ipsource] [port] -> [ipdest] [port]\
+alert tcp any any -> $HOME_NET 21 \
+(content:”anonymous”; msg: ”Login FTP (anonimo) invalido!”;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 \
+(msg: ”Login de FTP externo”;)
+
+
+# examples
+var RULES_PATH rules/
+portvar MY_PORTS [22,80,1024:1050]
+ipvar MY_NET [192.168.1.0/24,10.1.1.0/24]
+alert tcp any any -> $MY_NET $MY_PORTS (flags:S; msg:"SYN packet";)
+include $RULE_PATH/example.rule

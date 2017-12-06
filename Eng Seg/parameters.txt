@@ -1,0 +1,5 @@
+http://ipset.netfilter.org/iptables.man.html
+http://www.thegeekstuff.com/2011/01/iptables-fundamentals/
+https://www.vivaolinux.com.br/artigo/Netstat-a-fundo-(parte-1)
+https://en.wikipedia.org/wiki/Netstat
+https://nmap.org/book/man-port-scanning-techniques.html

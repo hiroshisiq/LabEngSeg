@@ -1,0 +1,17 @@
+#https://nmap.org/book/man-briefoptions.html
+#https://nmap.org/book/man-port-scanning-techniques.html
+#https://www.vivaolinux.com.br/artigo/Netstat-a-fundo-(parte-1)
+#https://en.wikipedia.org/wiki/Netstat
+
+netstat -nap
+nmap -sS -O 202.135.187.131
+
+#SERVIDOR:~$ iptables -t nat -A PREROUTING -i eth1 -p tcp --dport 1122 -j DNAT --to-dest 10.1.1.11:22
+#SERVIDOR:~$ iptables -A FORWARD -p tcp -i eth1 --dport 1122 -d 10.1.1.11 -j ACCEPT
+#24. Na máquina INTERNET, utilize o seguinte comando para descobrir a versão
+#do SSH. Digite quit e tecle enter para finalizar a conexão.
+#INTERNET:~$ telnet 202.135.187.131 22
+#25. O comando a seguir traz um pouco mais de informações de depuração.
+#INTERNET:~$ ssh -vN 202.135.187.131
+#26. Conecte-se via telnet ao servidor apache na porta 1180 com o comando:
+#INTERNET:~$ telnet 202.135.187.131 1180
