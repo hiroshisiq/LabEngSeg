@@ -1,0 +1,75 @@
+nmap -p 20,21,22 192.168.15.*
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2017-12-07 20:42 CST
+Nmap scan report for DSL-2401HN-T1C-NV.DSL-2401HN-T1C-NV (192.168.15.1)
+Host is up (0.0019s latency).
+
+PORT   STATE    SERVICE
+20/tcp closed   ftp-data
+21/tcp filtered ftp
+22/tcp filtered ssh
+MAC Address: 34:57:60:31:56:F0 (MitraStar Technology)
+
+Nmap scan report for 192.168.15.2
+Host is up (0.35s latency).
+
+PORT   STATE  SERVICE
+20/tcp closed ftp-data
+21/tcp closed ftp
+22/tcp closed ssh
+MAC Address: 98:39:8E:94:6E:17 (Samsung Electronics)
+
+Nmap scan report for 192.168.15.3
+Host is up (0.19s latency).
+
+PORT   STATE    SERVICE
+20/tcp filtered ftp-data
+21/tcp filtered ftp
+22/tcp filtered ssh
+MAC Address: 24:F5:AA:68:B7:76 (Samsung Electronics)
+
+Nmap scan report for 192.168.15.4
+Host is up (0.35s latency).
+
+PORT   STATE  SERVICE
+20/tcp closed ftp-data
+21/tcp closed ftp
+22/tcp closed ssh
+MAC Address: 9C:99:A0:D0:F4:24 (Xiaomi Communications)
+
+Nmap scan report for 192.168.15.5
+Host is up (0.00024s latency).
+
+PORT   STATE  SERVICE
+20/tcp closed ftp-data
+21/tcp open   ftp
+22/tcp open   ssh
+MAC Address: 08:00:27:F6:B5:B7 (Oracle VirtualBox virtual NIC)
+
+Nmap scan report for 192.168.15.6
+Host is up (5.9s latency).
+
+PORT   STATE    SERVICE
+20/tcp filtered ftp-data
+21/tcp filtered ftp
+22/tcp filtered ssh
+MAC Address: CC:61:E5:B1:0E:F6 (Motorola Mobility, a Lenovo Company)
+
+Nmap scan report for 192.168.15.7
+Host is up (0.50s latency).
+
+PORT   STATE    SERVICE
+20/tcp filtered ftp-data
+21/tcp filtered ftp
+22/tcp filtered ssh
+MAC Address: 9C:F4:8E:4B:08:89 (Apple)
+
+Nmap scan report for 192.168.15.8
+Host is up (0.000040s latency).
+
+PORT   STATE  SERVICE
+20/tcp closed ftp-data
+21/tcp closed ftp
+22/tcp closed ssh
+
+Nmap done: 256 IP addresses (8 hosts up) scanned in 42.01 seconds
